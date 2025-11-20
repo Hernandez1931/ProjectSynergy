@@ -32,6 +32,7 @@ public class enemyPatrol : MonoBehaviour
         }
         else
         {
+            Debug.Log("update");
             Vector2 point = loc.position - transform.position;
             if (loc == pointB.transform)
             {
@@ -46,11 +47,13 @@ public class enemyPatrol : MonoBehaviour
 
             if (Vector2.Distance(transform.position, loc.position) < 0.5f && loc == pointB.transform)
             {
+                Debug.Log("update");
                 loc = pointA.transform;
             }
 
             if (Vector2.Distance(transform.position, loc.position) < 0.5f && loc == pointA.transform)
             {
+                Debug.Log("update");
                 loc = pointB.transform;
             }
         }
