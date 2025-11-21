@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class stutterSpawn : MonoBehaviour
@@ -21,6 +22,7 @@ public class stutterSpawn : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
+        Debug.Log(timer);
         if (timer > 8)
         {
             L4.SetActive(true);
