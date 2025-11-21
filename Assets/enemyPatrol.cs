@@ -21,18 +21,6 @@ public class enemyPatrol : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-
-        float distance = Vector2.Distance(transform.position, player.transform.position);
-        Vector2 direct = player.transform.position - transform.position;
-
-        if (distance < 2)
-        {
-            body.linearVelocity = direct.normalized * speed ;
-        }
-        else
-        {
-            Debug.Log("update");
             Vector2 point = loc.position - transform.position;
             if (loc == pointB.transform)
             {
@@ -47,15 +35,12 @@ public class enemyPatrol : MonoBehaviour
 
             if (Vector2.Distance(transform.position, loc.position) < 0.5f && loc == pointB.transform)
             {
-                Debug.Log("update");
                 loc = pointA.transform;
             }
 
             if (Vector2.Distance(transform.position, loc.position) < 0.5f && loc == pointA.transform)
             {
-                Debug.Log("update");
                 loc = pointB.transform;
             }
-        }
     }
 }
