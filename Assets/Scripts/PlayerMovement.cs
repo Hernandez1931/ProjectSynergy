@@ -9,6 +9,7 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     public Rigidbody2D rb;
+    public Animator animator;
     bool isFacingRight = true;
 
     [Header("Movement")]
@@ -69,6 +70,8 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new UnityEngine.Vector2(horizontalMovement * moveSpeed, rb.velocity.y);
             Flip();
         }
+
+        animator.SetFloat("magnitude", rb.velocity.magnitude);
     }
 
     [System.Obsolete]

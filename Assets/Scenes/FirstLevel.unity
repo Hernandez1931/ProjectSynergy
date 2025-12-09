@@ -975,6 +975,7 @@ GameObject:
   - component: {fileID: 892304529}
   - component: {fileID: 892304533}
   - component: {fileID: 892304534}
+  - component: {fileID: 892304535}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1043,17 +1044,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.00012403727, y: -0.17204532}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.0666667, y: 1.0666667}
-    newSize: {x: 1.0666667, y: 1.0666667}
+    oldSize: {x: 0.97, y: 2.57}
+    newSize: {x: 0.97, y: 2.57}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.83237183, y: 0.76604515}
+  m_Size: {x: 1, y: 2.6}
   m_EdgeRadius: 0
 --- !u!212 &892304531
 SpriteRenderer:
@@ -1102,15 +1103,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2142528642, guid: a42360cdcfac7b34c94b04f6028456c1, type: 3}
+  m_Sprite: {fileID: -7534004140436456471, guid: 9f3403c59cc740d44b14f3d7e79beccd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.0666667, y: 1.0666667}
+  m_Size: {x: 0.97, y: 2.57}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &892304532
@@ -1122,7 +1123,7 @@ Transform:
   m_GameObject: {fileID: 892304526}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.352, y: 0.826, z: 0}
+  m_LocalPosition: {x: -1.844, y: 0.895, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1273,11 +1274,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   rb: {fileID: 892304529}
+  animator: {fileID: 0}
   moveSpeed: 5
   jumpPower: 10
   maxJumps: 2
   groundCheckPos: {fileID: 1614718996}
-  groundCheckSize: {x: 0.5, y: 0.04}
+  groundCheckSize: {x: 0.7, y: 0.07}
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -1285,12 +1287,34 @@ MonoBehaviour:
   maxFallSpeed: 20
   fallSpeedMultiplier: 2
   wallCheckPos: {fileID: 235502859}
-  wallCheckSize: {x: 0.49, y: 0.03}
+  wallCheckSize: {x: 0.2, y: 2.7}
   wallLayer:
     serializedVersion: 2
     m_Bits: 64
   wallSlideSpeed: 2
   wallJumpPower: {x: 5, y: 10}
+--- !u!95 &892304535
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 892304526}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b43b80010efcb4e4eb107fd1adc5ead1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &947702160
 GameObject:
   m_ObjectHideFlags: 0
@@ -2491,7 +2515,7 @@ Transform:
   m_GameObject: {fileID: 1614718995}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.537, z: 0}
+  m_LocalPosition: {x: 0.15, y: -1.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
