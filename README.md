@@ -18,6 +18,8 @@ Responsible for the soundtrack and ensuring that the themes remain loopable. Wor
 Tim Rodriguez:
 Responsible for sprite work. Used AI sprites.
 
+Adam Ornelas: Gave the original concept for the game's theming.
+
 
 ## NOTE: DO A PR WITHIN A BRANCH BEFORE COMMITING TO MAIN.
 ### This is to ensure that we don't break any code when merging with main. 
