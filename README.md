@@ -1,5 +1,7 @@
 # ProjectSynergy
-A metroidvania/RPG game that serves to encourage the player to explore different areas of the game, while also containing bosses that should test's the player's knowledge of the systems at hand.
+A platformer that serves the purpose of testing the player's abilities within platforming. Currently has one functional level, in which the player fights a "boss"
+that should involve a lot of enemies, buttons to push and so forth.
+
 
 ## NOTE: DO A PR WITHIN A BRANCH BEFORE COMMITING TO MAIN.
 ### This is to ensure that we don't break any code when merging with main. 
