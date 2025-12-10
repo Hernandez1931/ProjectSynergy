@@ -12,6 +12,7 @@ public class enemyPatrol : MonoBehaviour
     private Rigidbody2D body;
     public GameObject coneR;
     public GameObject coneL;
+    public GameObject pos;
     public float hp;
     private float leftB;
     private float rightB;
@@ -48,7 +49,7 @@ public class enemyPatrol : MonoBehaviour
             return;
         }
         timer += Time.deltaTime;
-        Vector3 worldPos = transform.position + Vector3.down * 0.1f;
+        Vector3 worldPos = pos.transform.position + Vector3.down * 0.1f;
         Vector3Int cellPos = tilemap.WorldToCell(worldPos);
         Vector3 pWorldPos = player.transform.position;
         Vector3Int pCellPos = tilemap.WorldToCell(pWorldPos);
@@ -58,14 +59,22 @@ public class enemyPatrol : MonoBehaviour
             if ((pCellPos.x - cellPos.x) < -5 || (pCellPos.x - cellPos.x) > 5)
             {
                 canAttack = false;
+                return;
             }
+
             if (aTimer > 1)
             {
                 attack.SetActive(true);
-                aTimer = 0;
+                aTimer += Time.deltaTime;
+                if (aTimer > 1.1) {
+                    aTimer = 0;
+                    return;
+                }
+                
             }
             else
             {
+                Debug.Log("aTimer");
                 attack.SetActive(false);
                 aTimer += Time.deltaTime;
             }
@@ -80,6 +89,10 @@ public class enemyPatrol : MonoBehaviour
             {
                 isChasing = false;
                 return;
+            }
+            else
+            {
+                cTimer = 2;
             }
             if (cellPos.x > rightB || cellPos.x < leftB)
             {
@@ -180,9 +193,9 @@ public class enemyPatrol : MonoBehaviour
     public void GetCurrentPlatformLength()
     {
         // 1. Get tile position under the object
-        Vector3 worldPos = transform.position + Vector3.down * 0.1f;
+        Vector3 worldPos = pos.transform.position + Vector3.down * 0.1f;
         Vector3Int below = tilemap.WorldToCell(worldPos);
-        Vector3Int cellPos = new Vector3Int(below.x, below.y - 5, below.z);
+        Vector3Int cellPos = new Vector3Int(below.x, below.y, below.z);
         Debug.Log(cellPos);
 
         if (!tilemap.HasTile(cellPos))

@@ -10,7 +10,7 @@ public class TriggerDmg : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             timer += Time.deltaTime;
-            if (timer > .1  )
+            if (timer > .05  )
             {
                 timer = 0;
                 other.gameObject.GetComponent<PlayerHealth>().health -= dmg;
