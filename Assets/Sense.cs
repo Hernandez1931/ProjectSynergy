@@ -8,6 +8,10 @@ public class Sense : MonoBehaviour
     private void Update()
     {
         timer += Time.deltaTime;
+        if (timer > 2)
+        {
+            enemy.GetComponent<enemyPatrol>().isAlert = false;
+        }
     }
     private void OnTriggerStay2D(Collider2D other)
     {
