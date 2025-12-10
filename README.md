@@ -2,6 +2,22 @@
 A platformer that serves the purpose of testing the player's abilities within platforming. Currently has one functional level, in which the player fights a "boss"
 that should involve a lot of enemies, buttons to push and so forth.
 
+# Meet the Team
+Angel Hernandez:
+Responsible for setting up the main mechanics in the game, getting the tilemap to function, and generally setting up the repo for the team.
+A lot of things look rough for Github standards because I've been learning Git/Github over this entire semester, thus resulting in a project
+that might look off for Github standards.
+Other things that I've been responsible for are a few of the main menu sprites, along with generally setting up the main menu in the first place.
+
+Juan Ortez:
+Responsible for the level design, enemy AI and setting up player damage. Is responsible for setting up the level within the presentation.
+
+Rigo Arteaga:
+Responsible for the soundtrack and ensuring that the themes remain loopable. Worked on making the music catchy and sounding very good.
+
+Tim Rodriguez:
+Responsible for sprite work. Used AI sprites.
+
 
 ## NOTE: DO A PR WITHIN A BRANCH BEFORE COMMITING TO MAIN.
 ### This is to ensure that we don't break any code when merging with main. 
