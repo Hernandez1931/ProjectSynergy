@@ -2,6 +2,10 @@
 A platformer that serves the purpose of testing the player's abilities within platforming. Currently has one functional level, in which the player fights a "boss"
 that should involve a lot of enemies, buttons to push and so forth.
 
+# Engine Used:
+Unity Engine (Version still not declared! Will be done so tonight.)
+
+
 # Meet the Team
 Angel Hernandez:
 Responsible for setting up the main mechanics in the game, getting the tilemap to function, and generally setting up the repo for the team.
