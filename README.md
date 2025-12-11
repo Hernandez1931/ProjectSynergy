@@ -3,7 +3,7 @@ A platformer that serves the purpose of testing the player's abilities within pl
 that should involve a lot of enemies, buttons to push and so forth.
 
 # Engine Used:
-Unity Engine (Version still not declared! Will be done so tonight.)
+Unity Engine Version 6000.2.6f2
 
 
 # Meet the Team
@@ -20,9 +20,10 @@ Rigo Arteaga:
 Responsible for the soundtrack and ensuring that the themes remain loopable. Worked on making the music catchy and sounding very good.
 
 Tim Rodriguez:
-Responsible for sprite work. Used AI sprites.
+Responsible for most sprite work. Used AI sprites.
 
-Adam Ornelas: Gave the original concept for the game's theming.
+Adam Ornelas:
+Responsible for pitching the original concept for the game's theming/story.
 
 
 ## NOTE: DO A PR WITHIN A BRANCH BEFORE COMMITING TO MAIN.
